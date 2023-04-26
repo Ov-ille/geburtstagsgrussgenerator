@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col" id="col-main">
+                <div id="div-main">
+                    <div id="div-start">
+                        <div class="row row-generator">
+                            <div class="row">
+                                <label id="label-name" for="input-name">Wie heißt du?</label>
+                            </div>
+                            <div class="row" id="div-name">
+                                <input type="text" id="input-name" size="20">
+                                <button id="btn-name" type="button" class="btn btn-secondary" disabled>Weiter</button>
+                            </div>
+                        </div>
+                        <div class="row row-generator">
+                            <div class="row">
+                                <label id="label-age" for="input-age">Wie alt wirst du?</label>
+                            </div>
+                            <div class="row" id="div-age">
+                                <input type="number" id="input-age" size="20" disabled>
+                                <button id="btn-age" type="button" class="btn btn-secondary" disabled>Weiter</button>
+                            </div>
+                        </div>
+                        <div class="row row-generator">
+                            <div class="row">
+                                <label id="label-wish">Was wünschst du dir?</label>
+                            </div>
+                            <div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="guter Kuchen" id="wish1"
+                                        disabled>
+                                    <label class="form-check-label" for="wish1">
+                                        guter Kuchen
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Gesundheit" id="wish2"
+                                        disabled>
+                                    <label class="form-check-label" for="wish2">
+                                        Gesundheit
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Sonnenschein" id="wish3"
+                                        disabled>
+                                    <label class="form-check-label" for="wish3">
+                                        Sonnenschein
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="alles Gute" id="wish4"
+                                        disabled>
+                                    <label class="form-check-label" for="wish3">
+                                        alles Gute
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row" id="row-btn-finish">
+                            <button id="btn-finish" type="button" class="btn btn-secondary" disabled>Fertig</button>
+                        </div>
+
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="modal-error" tabindex="-1" role="dialog"
+                        aria-labelledby="modal-error-label" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+
+                                <div class="modal-body">
+                                    <div id="modal-text"></div>
+                                    <img id="img-old" src="{{url_for('static', filename='shocked.PNG')}}" alt="">
+                                </div>
+                                <div class="modal-footer">
+                                    <button id="btn-modal-again" type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Nochmal
+                                        versuchen</button>
+                                    <button id="btn-modal-help" type="button" class="btn btn-primary">Soll ich dir
+                                        helfen?</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js.js') }}"></script>
+</body>
+
+</html>

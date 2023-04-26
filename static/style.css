@@ -1,0 +1,162 @@
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.div {
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    padding: 50px;
+    height: 100%
+}
+
+.row {
+    margin: 0;
+    height: 100%;
+}
+
+.col {
+    padding: 0;
+    height: 100%;
+}
+
+#col-main {
+    display: flex;
+    justify-content: center;
+}
+
+#div-main {
+    height: 100%;
+    background-color: rgb(203, 255, 255);
+    border: solid rgb(180, 226, 226);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%
+}
+
+#div-btn-start {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+#div-heading {
+    padding: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+#btn-start {
+    max-width: 150px;
+}
+
+#btn-start {
+    text-decoration: none;
+}
+
+.row-generator {
+    padding-top: 20px;
+    width: 100%;
+}
+
+.row-generator>.row>label {
+    padding: 0;
+}
+
+
+#div-name,
+#div-age,
+#div-wish {
+    display: flex;
+    align-items: center;
+}
+
+.row-generator>div>input {
+    max-width: 300px;
+    min-width: 200px;
+}
+
+.row-generator>div>button {
+    width: 80px;
+    height: 30px;
+    margin: 5px;
+    padding: 0;
+}
+
+#modal-text {
+    text-align: center;
+    font-weight: 500;
+}
+
+#img-old {
+    width: 100%;
+    display: none
+}
+
+#row-btn-finish {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+#btn-finish {
+    width: 80px;
+}
+
+
+#img-hb {
+    max-height: 300px;
+    margin: auto;
+    margin-top: 20px
+}
+
+#div-hb {
+    background-color: rgb(203, 255, 255);
+    border: solid rgb(180, 226, 226);
+    border-radius: 15px;
+    text-align: center;
+    padding: 40px;
+    margin: 50px 100px;
+    color: rgb(1, 75, 52)
+}
+
+@media only screen and (max-width: 600px) {
+    .container-fluid {
+        padding: 10px;
+    }
+
+    #div-main {
+        width: 90%
+    }
+
+    #div-heading {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    #img-hb {
+        max-width: 160px;
+        margin-top: 20px
+    }
+
+    #div-hb {
+        width: 300px;
+        background-color: rgb(203, 255, 255);
+        border: solid rgb(180, 226, 226);
+        border-radius: 15px;
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+        color: rgb(1, 75, 52)
+    }
+}
