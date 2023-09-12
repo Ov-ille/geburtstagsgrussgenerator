@@ -43,12 +43,10 @@ $(document).ready(function () {
         input_value = document.getElementById('input-age').value
         if (input_value > age) {
             document.getElementById("modal-text").innerHTML = "Ach komm, mach dich nicht älter als du bist!"
-            document.getElementById('btn-modal-help').style.visibility = "hidden"
             $('#modal-error').modal('show')
         }
         else if (input_value < age) {
             document.getElementById("modal-text").innerHTML = "Nicht schummeln!!"
-            document.getElementById('btn-modal-help').style.visibility = "hidden"
             $('#modal-error').modal('show')
         }
         else if (input_value == age) {
@@ -108,6 +106,11 @@ $(document).ready(function () {
 
             document.getElementById('input-age').disabled = false
             document.getElementById('label-age').style.color = "black"
+        }
+        if (document.getElementById('modal-text').innerHTML == "Ach komm, mach dich nicht älter als du bist!" | document.getElementById('modal-text').innerHTML == "Nicht schummeln!!") {
+            document.getElementById('input-age').value = age
+            document.getElementById('input-age').disabled = true
+            document.getElementById('btn-name').disabled = true
         }
         if (document.getElementById('modal-text').innerHTML == "SO ALT?????") {
             document.getElementById('input-age').disabled = true
