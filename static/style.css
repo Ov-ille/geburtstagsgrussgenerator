@@ -28,14 +28,16 @@ body {
 }
 
 #div-main {
-    height: 100%;
+    height: fit-content;
+    margin:auto;
     background-color: rgb(203, 255, 255);
     border: solid rgb(180, 226, 226);
     border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70%
+    max-width: fit-content;
+    padding: 50px ;
 }
 
 #div-btn-start {
@@ -121,22 +123,24 @@ a {
 }
 
 #div-hb {
+    height: fit-content;
+    margin:auto;
+    max-width: fit-content;
+    padding: 50px ;
     background-color: rgb(203, 255, 255);
     border: solid rgb(180, 226, 226);
     border-radius: 15px;
     text-align: center;
-    padding: 40px;
-    margin: 50px 100px;
     color: rgb(1, 75, 52)
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 715px) {
     .container-fluid {
         padding: 10px;
     }
 
     #div-main {
-        width: 90%
+        max-width: 90%
     }
 
     #div-heading {
@@ -150,13 +154,6 @@ a {
     }
 
     #div-hb {
-        width: 300px;
-        background-color: rgb(203, 255, 255);
-        border: solid rgb(180, 226, 226);
-        border-radius: 15px;
-        text-align: center;
-        padding: 10px;
-        margin: 10px;
-        color: rgb(1, 75, 52)
+        max-width: 90%;
     }
 }
