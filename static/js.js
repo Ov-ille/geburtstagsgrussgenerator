@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    let recipient = "recipient";
+    let sender = "sender";
+    let age = 99;
+
     if (document.getElementById('input-age').disabled == true) {
         document.getElementById('label-age').style.color = "grey"
     }
@@ -21,11 +25,11 @@ $(document).ready(function () {
     $("#btn-name").on("click", function () {
         // get input value
         input_value = document.getElementById('input-name').value.toLowerCase()
-        if (input_value != "stefflpeffl") {
+        if (input_value != recipient) {
             document.getElementById("modal-text").innerHTML = "Hmm... bist du dir sicher, dass das dein Name ist?"
             $('#modal-error').modal('show')
         }
-        if (input_value == "stefflpeffl") {
+        if (input_value == recipient) {
             document.getElementById('input-name').disabled = true
             document.getElementById('btn-name').disabled = true
 
@@ -37,17 +41,17 @@ $(document).ready(function () {
     $("#btn-age").on("click", function () {
         // get input value
         input_value = document.getElementById('input-age').value
-        if (input_value > 34) {
+        if (input_value > age) {
             document.getElementById("modal-text").innerHTML = "Ach komm, mach dich nicht älter als du bist!"
             document.getElementById('btn-modal-help').style.visibility = "hidden"
             $('#modal-error').modal('show')
         }
-        else if (input_value < 34) {
+        else if (input_value < age) {
             document.getElementById("modal-text").innerHTML = "Nicht schummeln!!"
             document.getElementById('btn-modal-help').style.visibility = "hidden"
             $('#modal-error').modal('show')
         }
-        else if (input_value == 34) {
+        else if (input_value == age) {
             document.getElementById("modal-text").innerHTML = "SO ALT?????"
             document.getElementById('btn-modal-help').style.visibility = "hidden"
             document.getElementById('img-old').style.display = "block"
@@ -84,8 +88,7 @@ $(document).ready(function () {
                 wishes.push(element.value)
             }
         });
-        console.log("TEST!!!!")
-        console.log(wishes)
+
         $.ajax({
             type: "POST",
             url: "/wishes",
@@ -99,7 +102,7 @@ $(document).ready(function () {
     $("#btn-modal-help").on("click", function () {
         $('#modal-error').modal('hide')
         if (document.getElementById('modal-text').innerHTML == "Hmm... bist du dir sicher, dass das dein Name ist?") {
-            document.getElementById('input-name').value = "Stefflpeffl"
+            document.getElementById('input-name').value = recipient
             document.getElementById('input-name').disabled = true
             document.getElementById('btn-name').disabled = true
 
