@@ -12,13 +12,13 @@
 </head>
 
 <body>
-    <div>
+    <div class="container-fluid">
         <div class="row">
             <div class="col" id="div-hb">
-                <div><b>HAPPY BIRTHDAY STEFFLPEFFL!</b><br>
-                    Zu deinem 34. Geburtstag wünsche ich dir {{wishes}}.<br>
+                <div><b>HAPPY BIRTHDAY {{recipient}}!</b><br>
+                    Zu deinem {{age}}. Geburtstag wünsche ich dir {{wishes}}.<br>
                     Hab einen tollen Tag und fühl dich lieb gegrüßt<br>
-                    von deiner Schwester Elli.
+                    von {{sender}}.
                 </div>
                 <img id="img-hb" src="{{url_for('static', filename='hb1.gif')}}" alt="">
 
