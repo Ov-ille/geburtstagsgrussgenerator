@@ -1,6 +1,5 @@
-from flask import Flask, render_template, url_for, request, session
+from flask import Flask, render_template, request
 from flask_session import Session
-from datetime import datetime
 import os
 
 app = Flask(__name__, static_url_path="/static")
@@ -25,7 +24,6 @@ wishes_global = ""
 
 @app.route("/wishes", methods=["POST"])
 def wishes():
-    print(session, session.keys())
     global wishes_global
     wishes_request = request.get_json()["wishes"]
     if len(wishes_request) > 2:
@@ -40,4 +38,7 @@ def wishes():
 
 @app.route("/happybirthday")
 def hb():
-    return render_template("hb.html", wishes=wishes_global)
+    return render_template("hb.html", wishes=wishes_global, recipient="RECIPIENT", sender="SENDER", age="99")
+
+if __name__ == '__main__':
+    app.run()
